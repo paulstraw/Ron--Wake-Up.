@@ -11,7 +11,7 @@ class ApplicationController < ActionController::Base
       return
     end
 
-    token_response = HTTParty.get("https://graph.facebook.com/oauth/access_token?client_id=289867491112170&redirect_uri=http://localhost:3000/done&client_secret=9eec06d26bd28015051b2d0e627cb53d&code=#{params[:code]}")
+    token_response = HTTParty.get("https://graph.facebook.com/oauth/access_token?client_id=289867491112170&redirect_uri=http://ronwakeup.paulstraw.com/done&client_secret=9eec06d26bd28015051b2d0e627cb53d&code=#{params[:code]}")
 
     unless token_response.code == 200
       render :text => "Ugh. There's some kind of problem. Try again later."
