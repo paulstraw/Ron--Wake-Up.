@@ -21,6 +21,6 @@
 
 set :output, "#{path}/log/cron.log"
 
-every 1.day, :at => '1:10 am' do
+every 1.day, :at => '1:10 pm' do
   rake "wake_ron"
 end
